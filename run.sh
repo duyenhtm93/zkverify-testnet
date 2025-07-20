@@ -149,7 +149,7 @@ for i in $(seq 1 $N); do
 
     if [[ $RESPONSE == *"Too Many Requests"* ]]; then
       echo "⏳ Too Many Requests. Waiting before retry..."
-      RETRY_DELAY=$(( RANDOM % 61 + 60 )) # Wait 100-200s
+      RETRY_DELAY=$(( RANDOM % 61 + 60 )) # Wait 60-120s
       echo "⏳ Waiting $RETRY_DELAY seconds before retry..."
       sleep $RETRY_DELAY
       ((ATTEMPT++))
@@ -158,7 +158,7 @@ for i in $(seq 1 $N); do
     fi
   done
 
-  DELAY=$(( RANDOM % 61 + 60 )) # Wait randomly from 120 to 300 seconds (2–5 minutes)
+  DELAY=$(( RANDOM % 61 + 60 )) # Wait randomly from 60-120s
   echo "⏳ Waiting $DELAY seconds before next submission... "
   sleep $DELAY
 done
