@@ -1,5 +1,5 @@
 # zkverify-testnet
 
 ```
-mkdir zkverify && cd zkverify && bash <(curl -s https://raw.githubusercontent.com/duyenhtm93/zkverify-testnet/refs/heads/main/run.sh)
+git clone https://github.com/duyenhtm93/zkverify-testnet.git && cd zkverify-testnet && chmod +x run.sh && ./run.sh
 ```
